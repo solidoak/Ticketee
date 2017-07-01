@@ -1,0 +1,76 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+
+@import 'projects';
+
+body {
+  padding-top: 70px;
+}
+
+form {
+  max-width: 500px;
+}
+
+header {
+  @extend .page-header;
+  position: relative;
+  padding-bottom: 0;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+.actions {
+  @extend .list-unstyled;
+  @extend .list-inline;
+  position: absolute;
+  bottom: -2px;
+  right: 2px;
+  max-width: 45%;
+  text-align: right;
+}
+
+.new:link,
+.edit:link,
+.delete:link {
+  @extend .btn;
+
+  &:before {
+    font-family: 'FontAwesome';
+    padding-right: 0.5em;
+  }
+}
+
+.new:link {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-plus;
+  }
+}
+
+.edit:link {
+  @extend .btn-primary;
+
+  &:before {
+    @extend .fa-pencil;
+  }
+}
+
+.delete:link {
+  @extend .btn-danger;
+
+  &:before {
+    @extend .fa-trash;
+  }
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
